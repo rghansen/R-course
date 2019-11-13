@@ -36,3 +36,9 @@ a <- c("red", "blue", "red", "red", "red", "blue")
 any(a == "blue")
 a <- c("red", "blue", "red", "red", "red", "blue")
 any(a == "yellow")
+
+#using the all function
+a <- c("red", "red", "red", "red", "red", "red")
+all(a == "red")
+a <- c("red", "blue", "red", "red", "red", "yellow")
+all(a == "red")
