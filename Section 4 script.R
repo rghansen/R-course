@@ -16,3 +16,9 @@ ind <- which.min(murder_rate)
 if(murder_rate[ind] < 0.5) {print(murders$state[ind])} else {print("No state has murder rate that low")}
 ind <- which.min(murder_rate)
 if(murder_rate[ind] < 0.25) {print(murders$state[ind])} else {print("No state has murder rate that low")}
+
+#shorthand condirional statement
+a <- "banana"
+ifelse(a == "banana", "yum", "yuck")
+a <- "beans"
+ifelse(a == "banana", "yum", "yuck")
