@@ -14,3 +14,5 @@ data(murders)
 murder_rate <-murders$total/murders$population*100000
 ind <- which.min(murder_rate)
 if(murder_rate[ind] < 0.5) {print(murders$state[ind])} else {print("No state has murder rate that low")}
+ind <- which.min(murder_rate)
+if(murder_rate[ind] < 0.25) {print(murders$state[ind])} else {print("No state has murder rate that low")}
