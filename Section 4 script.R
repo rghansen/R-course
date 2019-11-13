@@ -17,8 +17,12 @@ if(murder_rate[ind] < 0.5) {print(murders$state[ind])} else {print("No state has
 ind <- which.min(murder_rate)
 if(murder_rate[ind] < 0.25) {print(murders$state[ind])} else {print("No state has murder rate that low")}
 
-#shorthand condirional statement
+#shorthand conditional statement
 a <- "banana"
 ifelse(a == "banana", "yum", "yuck")
 a <- "beans"
 ifelse(a == "banana", "yum", "yuck")
+
+#conditional statements with vectors
+a <- c(1,2,3,4,5,4,3,2,1)
+ifelse(a >=2, a/2, "na")
