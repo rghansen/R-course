@@ -30,3 +30,9 @@ ifelse(a >=2, a/2, "na")
 #using conditional statements to replace "na" entries
 data(na_example)
 no_nas <- ifelse(is.na(na_example), 0, na_example)
+
+#using the any function
+a <- c("red", "blue", "red", "red", "red", "blue")
+any(a == "blue")
+a <- c("red", "blue", "red", "red", "red", "blue")
+any(a == "yellow")
