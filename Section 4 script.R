@@ -42,3 +42,4 @@ a <- c("red", "red", "red", "red", "red", "red")
 all(a == "red")
 a <- c("red", "blue", "red", "red", "red", "yellow")
 all(a == "red")
+
