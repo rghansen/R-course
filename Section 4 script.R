@@ -55,4 +55,17 @@ for(n in 1:25) {print(compute_sum(n))}
 m <- 25
 computed_sum <- vector(length = m)
 for(n in 1:m) {
-  computed_sum[m] <- compute_sum(n)}
+  computed_sum[n] <- compute_sum(n)}
+
+#testing an alternative way of doing the above for loop to create a vector
+m <- 25
+computed_sum2 <- vector("numeric", 25)
+for(n in 1:m) {
+  computed_sum2[n] <- compute_sum(n)
+}
+structure(computed_sum)
+
+#double checking created vector
+ax <- 1:25
+plot(ax,computed_sum)
+lines(ax, computed_sum2)
