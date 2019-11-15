@@ -43,3 +43,16 @@ all(a == "red")
 a <- c("red", "blue", "red", "red", "red", "yellow")
 all(a == "red")
 
+#Creating a function
+compute_sum <- function(n) { 
+  x <- 1:n 
+  sum(x) }
+
+#Creating a for loop
+for(n in 1:25) {print(compute_sum(n))}
+
+#creating a vector from a for loop using an empty vector as an index
+m <- 25
+computed_sum <- vector(length = m)
+for(n in 1:m) {
+  computed_sum[m] <- compute_sum(n)}
