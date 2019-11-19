@@ -1,3 +1,3 @@
-femweights <- read.csv("femaleMiceWeights.csv")
-femcontrol <- read.csv("femaleControlsPopulation.csv")
-pheno <- read.csv("mice_pheno.csv")
+femweights <- read.csv("Statistics and Data Visualization/femaleMiceWeights.csv")
+femcontrol <- read.csv("Statistics and Data Visualization/femaleControlsPopulation.csv")
+pheno <- read.csv("Statistics and Data Visualization/mice_pheno.csv")
