@@ -63,9 +63,15 @@ computed_sum2 <- vector("numeric", 25)
 for(n in 1:m) {
   computed_sum2[n] <- compute_sum(n)
 }
-structure(computed_sum)
+
+#testing whether assigning the maximum value of the vector as a variable is necessary
+computed_sum3 <- vector("numeric", 25)
+for(n in 1:25) {
+  computed_sum3[n] <- compute_sum(n)
+}
 
 #double checking created vector
 ax <- 1:25
 plot(ax,computed_sum)
 lines(ax, computed_sum2)
+lines(ax, computed_sum3)
