@@ -34,3 +34,6 @@ for (i in 1:n) {
 
 #visualize null distribution as histogram
 hist(distofdiff)
+
+#calculate a p-value from the distribution we generated
+p <- sum(abs(distofdiff) > difference)/length(distofdiff)
