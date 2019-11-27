@@ -44,3 +44,33 @@ for(i in 1:n) {
 }
 sum(popmeans > 1 + mean(x) | popmeans < mean(x) - 1)/1000
 
+#dowloading a new data set
+install.packages("gapminder")
+library(gapminder)
+data(gapminder)
+structure(gapminder)
+
+#creating a vector for life expectancies in 1952
+expt1952 <- filter(gapminder, year == "1952") %>% select(lifeExp) %>% unlist()
+
+#finding cdf values
+hist(expt1952)
+sum(expt1952 <= 40)/length(expt1952)
+sum(expt1952 <= 60)/length(expt1952) - sum(expt1952 <= 40)/length(expt1952)
+
+#building a custom funtion where the output is the cdf for the inputted value
+prop = function(q) {
+  sum(expt1952 <= q)/length(expt1952)
+}
+prop(40)
+
+#building a range of q values, 
+qs <- seq(from = min(expt1952), to = max(expt1952), length = 20)
+qs
+
+#inputting q values as into prop function and plotting it against qs
+props <- sapply(qs, prop)
+plot(qs, props)
+
+#using the ecdf function (built in to R) instead of creating a new function
+plot(ecdf(qs))
