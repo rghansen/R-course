@@ -24,3 +24,10 @@ for(i in 1:n) {
 #comparing shapes of means of samples using histograms
 hist(sample5)
 hist(sample50)
+
+#calculating proportion of means between 23 and 25 using sample
+interval1 <- sample50 <= 25 & sample50 >= 23
+sum(interval1)/length(sample50)
+
+#calculating proportion of means between 23 and 25 using n distribution
+pnorm(25, mean = 23.9, sd = 0.43) - pnorm(23, mean = 23.9, sd = 0.43)
